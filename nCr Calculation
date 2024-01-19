@@ -1,0 +1,25 @@
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+int factorial(int n){
+    int fact=1;
+    for(int i=1;i<=n;i++){
+        fact=fact*i;
+    }
+    return fact;
+}
+int nCr(int n,int r){
+    int nmr=factorial(n);
+    int dnr=factorial(r)*factorial(n-r);
+    int c=(nmr/dnr);
+    return c;
+}
+int main() {
+    int n;
+    int r;
+    cin>>n>>r;
+    cout<<"The Combination value is: "<<nCr(n,r);
+    
+
+    return 0;
+}
